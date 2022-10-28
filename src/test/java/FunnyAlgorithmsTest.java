@@ -4,6 +4,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 public class FunnyAlgorithmsTest
@@ -16,6 +18,37 @@ public class FunnyAlgorithmsTest
     public void before()
     {
         funnyAlgorithms = new FunnyAlgorithms();
+    }
+    @Test
+    public void selectionWorks()
+    {
+        int[] values = {60,10,30,40,50,80};
+        funnyAlgorithms.selectionSort(values,1);
+        boolean increasing = true;
+        for(int i = 1;i < values.length;i++)
+        {
+            int current = values[i];
+            int precedente = values[i - 1];
+            if(precedente > current)
+            {
+                increasing = false;
+                break;
+            }
+        }
+        assertTrue(increasing);
+        funnyAlgorithms.selectionSort(values,0);
+        boolean decrescente = true;
+        for(int i = 1;i < values.length;i++)
+        {
+            int current = values[i];
+            int precedente = values[i - 1];
+            if(precedente < current)
+            {
+                decrescente = false;
+                break;
+            }
+        }
+        assertTrue(decrescente);
     }
     @Test
     public void selectionShouldFail()
