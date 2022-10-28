@@ -1,7 +1,5 @@
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
+import org.joda.time.DateTime;
+import org.junit.*;
 import org.junit.rules.ExpectedException;
 
 import java.util.Arrays;
@@ -13,12 +11,26 @@ public class FunnyAlgorithmsTest
     private FunnyAlgorithms funnyAlgorithms;
     @Rule
     public ExpectedException expectedException = ExpectedException.none();
+    private int currentTest = 1;
 
     @Before
     public void before()
     {
         funnyAlgorithms = new FunnyAlgorithms();
+        System.out.println("Test" + " " + "started at" + " " + new DateTime());
     }
+    @After
+    public void after()
+    {
+        System.out.println("Test" + " " +  "ended at" + " " + new DateTime());
+    }
+    /***@Test
+    public void binaryShouldWork()
+    {
+        int[] values = {10,20,30,40,50,60};
+        for(int i = 0;i < values.length;i++)
+            assertEquals(i,funnyAlgorithms.binarySearch(values,values[i]));
+    }**/
     @Test
     public void binaryShouldFail()
     {
