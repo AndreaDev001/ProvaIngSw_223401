@@ -20,6 +20,15 @@ public class FunnyAlgorithmsTest
         funnyAlgorithms = new FunnyAlgorithms();
     }
     @Test
+    public void swapWorks()
+    {
+        int[] first = {10,20,30};
+        FunnyAlgorithms.swap(first,0,1);
+        assertEquals(20,first[0]);
+        FunnyAlgorithms.swap(first,2,1);
+        assertEquals(30,first[1]);
+    }
+    @Test
     public void selectionWorks()
     {
         int[] values = {60,10,30,40,50,80};
