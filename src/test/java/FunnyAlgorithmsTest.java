@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -15,6 +16,20 @@ public class FunnyAlgorithmsTest
     public void before()
     {
         funnyAlgorithms = new FunnyAlgorithms();
+    }
+    @Test
+    public void stringToIntWorks()
+    {
+        String[] values = {"10","30","400","200","40","80","-20","-30","-40"};
+        assertEquals(10,funnyAlgorithms.stringToIntConverter(values[0]));
+        assertEquals(30,funnyAlgorithms.stringToIntConverter(values[1]));
+        assertEquals(400,funnyAlgorithms.stringToIntConverter(values[2]));
+        assertEquals(200,funnyAlgorithms.stringToIntConverter(values[3]));
+        assertEquals(40,funnyAlgorithms.stringToIntConverter(values[4]));
+        assertEquals(80,funnyAlgorithms.stringToIntConverter(values[5]));
+        assertEquals(-20,funnyAlgorithms.stringToIntConverter(values[6]));
+        assertEquals(-30,funnyAlgorithms.stringToIntConverter(values[7]));
+        assertEquals(-40,funnyAlgorithms.stringToIntConverter(values[8]));
     }
     @Test
     public void stringToIntNull()

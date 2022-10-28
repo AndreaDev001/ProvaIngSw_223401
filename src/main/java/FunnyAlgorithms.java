@@ -73,12 +73,11 @@ public class FunnyAlgorithms
     {
         if(number.isEmpty())
              throw new IllegalArgumentException("Number can't be null");
-        if(number.contains(" ") || !number.matches("[0-9]+"))
+        if(number.contains(" ") || !number.matches("-?[0-9]+"))
              throw new IllegalArgumentException("Number can be composed only by digits");
         int value = Integer.parseInt(number);
         if(value < -32768 || value > 32767)
             throw new IllegalArgumentException("Required number is out of range");
-        System.out.println("Here");
         return value;
     }
 }
