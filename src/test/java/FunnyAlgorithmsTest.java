@@ -40,31 +40,31 @@ public class FunnyAlgorithmsTest
     {
         int[] values = {60,10,30,40,50,80};
         funnyAlgorithms.selectionSort(values,1);
-        boolean increasing = true;
+        boolean ascending = true;
         for(int i = 1;i < values.length;i++)
         {
             int current = values[i];
             int precedente = values[i - 1];
             if(precedente > current)
             {
-                increasing = false;
+                ascending = false;
                 break;
             }
         }
-        assertTrue(increasing);
+        assertTrue(ascending);
         funnyAlgorithms.selectionSort(values,0);
-        boolean decrescente = true;
+        boolean descending = true;
         for(int i = 1;i < values.length;i++)
         {
             int current = values[i];
             int precedente = values[i - 1];
             if(precedente < current)
             {
-                decrescente = false;
+                descending = false;
                 break;
             }
         }
-        assertTrue(decrescente);
+        assertTrue(descending);
     }
     @Test
     public void selectionShouldFail()
