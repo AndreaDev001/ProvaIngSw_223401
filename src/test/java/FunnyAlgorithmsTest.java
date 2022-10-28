@@ -18,6 +18,14 @@ public class FunnyAlgorithmsTest
         funnyAlgorithms = new FunnyAlgorithms();
     }
     @Test
+    public void selectionShouldFail()
+    {
+        expectedException.expect(IllegalArgumentException.class);
+        expectedException.expectMessage("L'ordine può essere 0 o 1.");
+        int[] values = {10,100,20,50,70};
+        funnyAlgorithms.selectionSort(values,10);
+    }
+    @Test
     public void stringToIntWorks()
     {
         String[] values = {"10","30","400","200","40","80","-20","-30","-40"};
