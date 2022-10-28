@@ -11,8 +11,6 @@ public class FunnyAlgorithmsTest
     private FunnyAlgorithms funnyAlgorithms;
     @Rule
     public ExpectedException expectedException = ExpectedException.none();
-    private int currentTest = 1;
-
     @Before
     public void before()
     {
