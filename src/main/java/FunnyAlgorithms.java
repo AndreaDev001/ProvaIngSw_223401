@@ -73,8 +73,9 @@ public class FunnyAlgorithms
     {
         if(number.isEmpty())
              throw new IllegalArgumentException("Number can't be null");
-        if(number.matches("[0-9]+"))
+        if(number.matches("[0-9]+") || number.contains(" "))
              throw new IllegalArgumentException("Number can be composed only by digits");
+        System.out.println("Here");
         int value = Integer.parseInt(number);
         if(value < -32768 || value > 32767)
             throw new IllegalArgumentException("Required number" + " " + number + " " + "out of range");
