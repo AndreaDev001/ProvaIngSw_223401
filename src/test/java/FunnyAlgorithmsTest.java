@@ -24,4 +24,20 @@ public class FunnyAlgorithmsTest
         String number = "";
         int value = funnyAlgorithms.stringToIntConverter(number);
     }
+    @Test
+    public void stringToIntWithSpace()
+    {
+        expectedException.expect(IllegalArgumentException.class);
+        expectedException.expectMessage("Number can be composed only by digits");
+        String value = "10 20 30 40 50";
+        int result = funnyAlgorithms.stringToIntConverter(value);
+    }
+    @Test
+    public void stringToIntRangeUpper()
+    {
+        expectedException.expect(IllegalArgumentException.class);
+        expectedException.expectMessage("Required number is out of range");
+        String value = "32768";
+        int result = funnyAlgorithms.stringToIntConverter(value);
+    }
 }
