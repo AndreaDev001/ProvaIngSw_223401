@@ -40,4 +40,12 @@ public class FunnyAlgorithmsTest
         String value = "32768";
         int result = funnyAlgorithms.stringToIntConverter(value);
     }
+    @Test
+    public void stringToIntRangeLower()
+    {
+        expectedException.expect(IllegalArgumentException.class);
+        expectedException.expectMessage("Required number is out of range");
+        String value = "-32770";
+        int result = funnyAlgorithms.stringToIntConverter(value);
+    }
 }
