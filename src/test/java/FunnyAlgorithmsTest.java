@@ -16,12 +16,6 @@ public class FunnyAlgorithmsTest
     public void before()
     {
         funnyAlgorithms = new FunnyAlgorithms();
-        System.out.println("Test" + " " + "started at" + " " + new DateTime());
-    }
-    @After
-    public void after()
-    {
-        System.out.println("Test" + " " +  "ended at" + " " + new DateTime());
     }
     /***@Test
     public void binaryShouldWork()
