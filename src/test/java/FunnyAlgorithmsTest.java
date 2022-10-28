@@ -25,6 +25,14 @@ public class FunnyAlgorithmsTest
         int value = funnyAlgorithms.stringToIntConverter(number);
     }
     @Test
+    public void stringToIntWithLetters()
+    {
+        expectedException.expect(IllegalArgumentException.class);
+        expectedException.expectMessage("Number can be composed only by digits");
+        String number = "10abc20";
+        int value = funnyAlgorithms.stringToIntConverter(number);
+    }
+    @Test
     public void stringToIntWithSpace()
     {
         expectedException.expect(IllegalArgumentException.class);
