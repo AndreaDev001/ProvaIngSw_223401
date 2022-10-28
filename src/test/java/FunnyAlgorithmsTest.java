@@ -20,6 +20,13 @@ public class FunnyAlgorithmsTest
         funnyAlgorithms = new FunnyAlgorithms();
     }
     @Test
+    public void binaryShouldFail()
+    {
+        int[] values = {10,20,30,40,50};
+        for(int i = 60;i < 120;i += 10)
+            assertEquals(-1,funnyAlgorithms.binarySearch(values,i));
+    }
+    @Test
     public void swapWorks()
     {
         int[] first = {10,20,30};
